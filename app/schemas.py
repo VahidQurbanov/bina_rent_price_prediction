@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-# Mənzil xüsusiyyətləri üçün şemalar (input)
+# Schemas for apartment features (input)
 class Apartment(BaseModel):
     rooms: int
     area_m2: float
@@ -10,6 +10,6 @@ class Apartment(BaseModel):
     building_type: str
     city: str
 
-# API response üçün şema (çıxış)
+# Schema for API response (output)
 class PredictionResponse(BaseModel):
     predicted_price: float
